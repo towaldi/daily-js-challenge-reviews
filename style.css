@@ -1,0 +1,182 @@
+/* ==========================================================================
+   reset all
+   ========================================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* display & box model */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* other */
+    background-color: #d7d7d7;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/* ==========================================================================
+   elements
+   ========================================================================== */
+
+header {
+    /* display & box model */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    /* other */
+    background-color: #fff;
+    border-bottom: 2px solid #000;
+}
+
+main {
+    /* display & box model */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 1rem;
+}
+
+.review-card {
+    /* display & box model */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    max-width: 40rem;
+    /* other */
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 1rem;
+}
+
+.monogram {
+    /* display & box model */
+    height: 2rem;
+    width: 2rem;
+    /* other */
+}
+
+.btn {
+    /* display & box model */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    /* Other */
+    background-color: transparent;
+    border: 2px solid #000;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+.btn:hover {
+    /* other */
+    background-color: #efefef;
+}
+
+
+/* ==========================================================================
+   layout
+   ========================================================================== */
+
+.row-1rem {
+    /* display & box model */
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    /* other */
+}
+
+
+
+/* ==========================================================================
+   font
+   ========================================================================== */
+
+h1 {
+    font-family: 'Roboto', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3rem;
+    color: #000;
+}
+
+h2, p {
+    font-family: 'Roboto Mono', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 1rem;
+    color: #000;
+}
+
+p {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #000;
+}
+
+a, .btn {
+    font-family: 'Roboto', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+
+/* font implementation - 'roboto'
+   ========================================================================== */
+
+/* bold */
+@font-face {
+    font-family: 'Roboto';
+    src: url(./assets/Roboto/Roboto-Bold.ttf) format('truetype');
+    font-style: normal;
+    font-weight: 700;
+}
+
+
+/* regluar */
+@font-face {
+    font-family: 'Roboto';
+    src: url(./assets/Roboto/Roboto-Regular.ttf) format('truetype');
+    font-style: normal;
+    font-weight: 400;
+}
+
+
+/* font implementation - 'roboto mono'
+   ========================================================================== */
+
+/* bold */
+@font-face {
+    font-family: 'Roboto Mono';
+    src: url(./assets/Roboto_Mono/static/RobotoMono-Bold.ttf) format('truetype');
+    font-style: normal;
+    font-weight: 700;
+}
+
+
+/* regluar */
+@font-face {
+    font-family: 'Roboto Mono';
+    src: url(./assets/Roboto_Mono/static/RobotoMono-Regular.ttf) format('truetype');
+    font-style: normal;
+    font-weight: 400;
+}
