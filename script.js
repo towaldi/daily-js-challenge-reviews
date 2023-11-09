@@ -1,20 +1,18 @@
 
 
 
+const reviewCard = document.querySelector('.review-card');
+const monogram = document.querySelector('.monogram');
+const name = document.querySelector('.name');
+const profession = document.querySelector('.profession');
+const quote = document.querySelector('.quote');
+const prevBtn = document.getElementById('prev-btn');
+const nextBtn = document.getElementById('next-btn');
+
+const currentReview = 0;
 
 
 
-const reviews = REVIEW_DATA.forEach((review) => {
-    return /* html */ ` <div class="review-card">
-                            <img class="monogram" src="${review.img}" alt="profile picture">
-                            <h1>${review.name}</h1>
-                            <h2>${review.profession}</h2>
-                            <p>${review.quote}</p>
-                            <div class="row-1rem">
-                                <button class="btn last"><img src="./assets/icons/chevron_left_24px.svg"></button>
-                                <button class="btn next"><img src="./assets/icons/chevron_right_24px.svg"></button>
-                            </div>
-                        </div>`;
-
-    console.log(review);
-});
+reviewCard.addEventListener('DOMContentLoaded', function () {
+    const review = REVIEW_DATA[currentReview];
+})
