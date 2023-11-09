@@ -1,18 +1,52 @@
 
-
-
-const reviewCard = document.querySelector('.review-card');
+const reviewCard = document.getElementById('review-card');
 const monogram = document.querySelector('.monogram');
-const name = document.querySelector('.name');
-const profession = document.querySelector('.profession');
-const quote = document.querySelector('.quote');
+const username = document.getElementById('name');
+const profession = document.getElementById('profession');
+const quote = document.getElementById('quote');
 const prevBtn = document.getElementById('prev-btn');
 const nextBtn = document.getElementById('next-btn');
 
-const currentReview = 0;
+let currentReview = 0;
 
 
 
-reviewCard.addEventListener('DOMContentLoaded', function () {
-    const review = REVIEW_DATA[currentReview];
-})
+document.addEventListener('DOMContentLoaded', function () {
+    displayPersonReview(currentReview);
+    console.log('shake and bake');
+});
+
+
+function displayPersonReview(user) {
+    const review = REVIEW_DATA[user];
+    monogram.src = review.img;
+    username.innerHTML = review.name;
+    profession.innerHTML = review.profession;
+    quote.innerHTML = review.quote;
+}
+
+
+/**
+ * Previous user
+ */
+
+prevBtn.addEventListener('click', function() {
+    currentReview--;
+    if (currentReview < 0) {
+        currentReview = REVIEW_DATA.length - 1;
+    }
+    displayPersonReview(currentReview);
+});
+
+
+/**
+ * Next user
+ */
+
+nextBtn.addEventListener('click', function() {
+    currentReview++;
+    if (currentReview > REVIEW_DATA.length - 1) {
+        currentReview = 0;
+    }
+    displayPersonReview(currentReview);
+});

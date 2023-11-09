@@ -64,9 +64,10 @@ main {
 
 .monogram {
     /* display & box model */
-    height: 2rem;
-    width: 2rem;
+    height: 8rem;
+    width: 8rem;
     /* other */
+    border-radius: 8rem;
 }
 
 .btn {
