@@ -5,6 +5,7 @@ const username = document.getElementById('name');
 const profession = document.getElementById('profession');
 const quote = document.getElementById('quote');
 const prevBtn = document.getElementById('prev-btn');
+const randomBtn = document.getElementById('random-btn');
 const nextBtn = document.getElementById('next-btn');
 
 let currentReview = 0;
@@ -27,7 +28,7 @@ function displayPersonReview(user) {
 
 
 /**
- * Previous user
+ * Previous review
  */
 
 prevBtn.addEventListener('click', function() {
@@ -38,9 +39,18 @@ prevBtn.addEventListener('click', function() {
     displayPersonReview(currentReview);
 });
 
+/**
+ * Random next review
+ */
+
+randomBtn.addEventListener('click', function() {
+    currentReview = Math.floor(Math.random() * REVIEW_DATA.length);
+    displayPersonReview(currentReview);
+});
+
 
 /**
- * Next user
+ * Next review
  */
 
 nextBtn.addEventListener('click', function() {
