@@ -1,4 +1,6 @@
-
+/**
+ * Selection of elements/items
+ */
 const reviewCard = document.getElementById('review-card');
 const monogram = document.querySelector('.monogram');
 const username = document.getElementById('name');
@@ -8,15 +10,27 @@ const prevBtn = document.getElementById('prev-btn');
 const randomBtn = document.getElementById('random-btn');
 const nextBtn = document.getElementById('next-btn');
 
+/**
+ * Defines starting element/item
+ */
+
 let currentReview = 0;
 
 
+/**
+ * Executes `displayPersonReview' when HTML document finished loading
+ * -> 'DOMContentLoaded' -> fired when the initial HTML documengt has been completely loaded
+ */
 
 document.addEventListener('DOMContentLoaded', function () {
     displayPersonReview(currentReview);
-    console.log('shake and bake');
 });
 
+
+/**
+ * Renders data form 'data.js'
+ * @param {String} user 
+ */
 
 function displayPersonReview(user) {
     const review = REVIEW_DATA[user];
